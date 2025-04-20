@@ -119,14 +119,14 @@ Check out the [full documentation](https://apex-docs.readthedocs.io/en/latest/) 
     }
   ],
 
-  resumeSkills: {
-    programmingLanguages: ["Java", "Python", "SQL"],
-    frameworks: ["SpringBoot", "Hibernate", "Flask", "Apache Camel", "JUnit/Mockito"],
-    databases: ["MySQL", "Informix"],
-    cloudDevOps: ["Docker", "Kubernetes", "GitLab CI/CD", "TeamCity"],
-    distributedSystems: ["Apache Kafka", "Reactive Microservices", "REST/gRPC APIs"],
-    otherSkills: ["Github Copilot", "Cursor", "Replit", "Diffblue", "Mapstruct", "Orika"]
-  },
+  resumeSkills: [
+    { "Programming Languages": "Java, Python, SQL" },
+    { "Frameworks": "SpringBoot, Hibernate, Flask, Apache Camel, JUnit/Mockito" },
+    { "Databases": "MySQL, Informix" },
+    { "Cloud / DevOps and CI/CD": "Docker, Kubernetes, GitLab CI/CD, TeamCity" },
+    { "Distributed Systems": "Apache Kafka, Reactive Microservices, REST/gRPC APIs" },
+    { "Other Skills": "Github Copilot, Cursor, Replit, Diffblue, Mapstruct, Orika" }
+  ],
 
   professionalExperience: [
     {

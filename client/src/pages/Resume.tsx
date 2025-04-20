@@ -148,54 +148,19 @@ export default function Resume() {
               Technical Skills
             </h2>
             <div className="space-y-2">
-              <div>
-                <h3 className="font-medium text-sm text-gray-700 dark:text-gray-300 print:dark:text-gray-700 inline">
-                  Programming Languages:
-                </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 print:dark:text-gray-600 inline ml-2">
-                  {resumeSkills.programmingLanguages.join(", ")}
-                </p>
-              </div>
-              <div>
-                <h3 className="font-medium text-sm text-gray-700 dark:text-gray-300 print:dark:text-gray-700 inline">
-                  Frameworks:
-                </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 print:dark:text-gray-600 inline ml-2">
-                  {resumeSkills.frameworks.join(", ")}
-                </p>
-              </div>
-              <div>
-                <h3 className="font-medium text-sm text-gray-700 dark:text-gray-300 print:dark:text-gray-700 inline">
-                  Databases:
-                </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 print:dark:text-gray-600 inline ml-2">
-                  {resumeSkills.databases.join(", ")}
-                </p>
-              </div>
-              <div>
-                <h3 className="font-medium text-sm text-gray-700 dark:text-gray-300 print:dark:text-gray-700 inline">
-                  Cloud / DevOps and CI/CD:
-                </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 print:dark:text-gray-600 inline ml-2">
-                  {resumeSkills.cloudDevOps.join(", ")}
-                </p>
-              </div>
-              <div>
-                <h3 className="font-medium text-sm text-gray-700 dark:text-gray-300 print:dark:text-gray-700 inline">
-                  Distributed Systems:
-                </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 print:dark:text-gray-600 inline ml-2">
-                  {resumeSkills.distributedSystems.join(", ")}
-                </p>
-              </div>
-              <div>
-                <h3 className="font-medium text-sm text-gray-700 dark:text-gray-300 print:dark:text-gray-700 inline">
-                  Other Skills:
-                </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 print:dark:text-gray-600 inline ml-2">
-                  {resumeSkills.otherSkills.join(", ")}
-                </p>
-              </div>
+              {resumeSkills.map((skill, index) => {
+                const [category, value] = Object.entries(skill)[0];
+                return (
+                  <div key={index}>
+                    <h3 className="font-medium text-sm text-gray-700 dark:text-gray-300 print:dark:text-gray-700 inline">
+                      {category}:
+                    </h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 print:dark:text-gray-600 inline ml-2">
+                      {value}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
           </section>
 
@@ -239,7 +204,16 @@ export default function Resume() {
           </section>
 
           <div className="text-center mt-4 text-xs text-gray-500 dark:text-gray-400 print:dark:text-gray-500">
-            <p>APEX · Bluelink · Maxine · Complexica · Other Projects · More</p>
+            <p>
+              {profileData.projects.map((project, index) => (
+                <span key={project.id}>
+                  <Link href={`/projects#${project.id}`} className="text-primary hover:text-primary/80 dark:text-primary-400 dark:hover:text-primary-300 transition-colors">
+                    {project.title}
+                  </Link>
+                  {index < profileData.projects.length - 1 ? " · " : ""}
+                </span>
+              ))}
+            </p>
           </div>
         </div>
       </div>
