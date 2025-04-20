@@ -119,6 +119,90 @@ Check out the [full documentation](https://apex-docs.readthedocs.io/en/latest/) 
     }
   ],
 
+  resumeSkills: {
+    programmingLanguages: ["Java", "Python", "SQL"],
+    frameworks: ["SpringBoot", "Hibernate", "Flask", "Apache Camel", "JUnit/Mockito"],
+    databases: ["MySQL", "Informix"],
+    cloudDevOps: ["Docker", "Kubernetes", "GitLab CI/CD", "TeamCity"],
+    distributedSystems: ["Apache Kafka", "Reactive Microservices", "REST/gRPC APIs"],
+    otherSkills: ["Github Copilot", "Cursor", "Replit", "Diffblue", "Mapstruct", "Orika"]
+  },
+
+  professionalExperience: [
+    {
+      company: "NASDAQ",
+      title: "Senior Software Developer",
+      period: "Nov 2022 – Present | Bangalore - IN",
+      responsibilities: [
+        "<strong>High Performance Trading Systems:</strong> Developed and optimized customer tailored solutions for the Multi Matching Engine (MME) - a lightning fast orders matching and execution engine) using Java, Spring framework, and reactive patterns, to enable automatic trade execution for 10M+ daily transactions across forex, equities, and crypto markets.",
+        "<strong>Cloud-Native Deployment:</strong> Containerized services with Docker and orchestrated deployments on Kubernetes/Amazon EKS, reducing infrastructure costs and improving system uptime.",
+        "<strong>CI/CD Automation:</strong> Contributed to migration from Teamcity and wrote GitLab CI/CD pipelines for artifact publishing, vulnerability scanning (Prisma, SonarQube, Sonatype), and deployment, reducing build time.",
+        "<strong>Infrastructure-as-Code:</strong> Customized the Operations framework called MOE (MME Operating Environments) to streamline Amazon EKS and EKS Anywhere deployments, designing partitioned Helm layouts resulting in a significant reduction in deployment setup time for a LATAM customer.",
+        "<strong>Customer Adaptations:</strong> Delivered 15+ product adaptations and customizations for 3+ customers across LATAM, US and EU to deliver tailored solutions addressing unique requirements, including leading onsite acceptance testing from dev side in Colombia for a equity trading platform handling $500M+ daily volume.",
+        "<strong>Security &amp; Testing:</strong><ul>Patched 50+ vulnerabilities in dependencies, reducing Sonatype threat score from 9→1.5, enhancing supply chain security.</li>Identified and resolved compatibility issues in unit testing frameworks that revamped 2500+ JUnit/Mockito test cases, achieving 90%+ code coverage.</li>Designed checkstyles and established coding conventions to ensure high-quality code standards.</li></ul>",
+        "<strong>AI-Driven Efficiency:</strong> Utilized GitHub Copilot to draft technical documentation (Javadocs, Confluence pages) and boilerplate code (DTOs, repetitive logic), and conducted a proof of concept (PoC) on Diffblue to automate generating unit tests, increasing code coverage significantly and enhancing code reliability.",
+        "<strong>Streamline workflows:</strong> Administered tools like TaskTop integration, repository access management, and CI/CD pipeline automation for seamless builds and deployments.</li>"
+      ]
+    },
+    {
+      company: "Capsystematic Technologies Pvt Ltd.",
+      title: "Software Engineer",
+      period: "Dec 2019 – Nov 2022 | Bangalore - IN",
+      responsibilities: [
+        "<strong>Core Development:</strong> Engineered and modernized capital markets and payment software for banks and financial institutions by leveraging a comprehensive technology stack—Java, Spring Boot, Python Flask, Docker, Apache Camel, CXF, Informix, Orika, and MapStruct—to deliver scalable, secure, and high-performance solutions.",
+        "<strong>Zeus-GPI (General process interface):</strong> A business integration middleware to connect front office with core system, typically processes ISO 20022 message by SOAP and REST APIs and services for seamless integration across different channels.",
+        "Developed SOAP and REST APIs using Java, Spring Boot, and Apache Camel to route Interbank financial telecommunication (e.g., Swift MT/MX, ISO 20022) between diverse endpoints like databases, message queues, HTTP, SOAP, and SMB filesystems that enabled seamless integration for investment banking customers to significantly reduce message delivery latency.",
+        "<strong>CMS (Card Management System):</strong> A payment technology built on the BASE24 engine to acquire, authenticate, route, switch, and authorize credit, debit, and forex transactions.",
+        "Migrated legacy Pro*C (circa 1993) code to a modern Java-based architecture using Spring Boot, JPA and Security, improving scalability and maintainability.",
+        "Developed RESTful APIs enabling transaction reconciliation, settlement, dispute management, and corporate card services for acquirers and issuers.",
+        "<strong>CapSuite:</strong> Designed and implemented an automation tool that generates code for entities and mappings based on SQL procedures and Swift MT/MX message definitions, significantly improving developer efficiency."
+      ]
+    },
+    {
+      company: "Capsystematic Technologies Pvt Ltd.",
+      title: "SDE Intern",
+      period: "Sept 2019 – Dec 2019 | Bangalore - IN",
+      responsibilities: [
+        "Developed Apache Camel message routes, gained investment banking exposure."
+      ]
+    }
+  ],
+
+  education: [
+    {
+      degree: "B.E. – Information Technology (CGPA = 8.24)",
+      institution: "Apollo Institute of Engineering (Gujarat technological university)",
+      year: "Jul 2015- May 2019 | Ahmedabad - IN"
+    }
+  ],
+
+  resumeCertifications: [
+    {
+      title: "Scrum Alliance CSPO",
+      link: "https://bcert.me/sefawhitn"
+    },
+    {
+      title: "IBM Blockchain",
+      link: "https://courses.cognitiveclass.ai/certificates/e73685d94f344d92b329712d7dceac5c"
+    },
+    {
+      title: "Nutanix Hybrid Cloud",
+      link: "https://drive.google.com/file/d/1rgkx3sx-quvh7SUVxVdWT5iELAWM5b4y/view?usp=sharing"
+    },
+    {
+      title: "AWS Data Analytics",
+      link: "https://drive.google.com/file/d/1-ory7-vSeIpgnFXzP_oDQGzHQf8yJiV5/view?usp=sharing"
+    },
+    {
+      title: "Deep Learning Nanodegree",
+      link: "https://graduation.udacity.com/confirm/EL966DFN"
+    },
+    {
+      title: "Intel AI Edge",
+      link: "https://drive.google.com/file/d/1r7c2GWMveQTFBI2w0Vbt-LC2LRHth3o6/view?usp=sharing"
+    }
+  ],
+
   projects: [
     {
       id: "APEX",
@@ -215,7 +299,7 @@ Check out the [full documentation](https://apex-docs.readthedocs.io/en/latest/) 
   skills: [
     {
       category: "Languages",
-      icon: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4", // Code icon path
+      icon: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4",
       bgColor: "bg-primary-100 dark:bg-primary-900/30",
       textColor: "text-primary-600 dark:text-primary-400",
       items: [
@@ -228,7 +312,7 @@ Check out the [full documentation](https://apex-docs.readthedocs.io/en/latest/) 
     },
     {
       category: "Frameworks & Libraries",
-      icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10", // Package icon
+      icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10",
       bgColor: "bg-secondary-100 dark:bg-secondary-900/30",
       textColor: "text-secondary-600 dark:text-secondary-400",
       items: [
@@ -241,7 +325,7 @@ Check out the [full documentation](https://apex-docs.readthedocs.io/en/latest/) 
     },
     {
       category: "Cloud & DevOps",
-      icon: "M3 15a4 4 0 004 4h9a5 5 0 10-4.5-8.5M13 8.5a4 4 0 114 0M4.5 12.5a4 4 0 110-8 4 4 0 010 8z", // Cloud icon
+      icon: "M3 15a4 4 0 004 4h9a5 5 0 10-4.5-8.5M13 8.5a4 4 0 114 0M4.5 12.5a4 4 0 110-8 4 4 0 010 8z",
       bgColor: "bg-accent-100 dark:bg-accent-900/30",
       textColor: "text-accent-600 dark:text-accent-400",
       items: [
@@ -254,7 +338,7 @@ Check out the [full documentation](https://apex-docs.readthedocs.io/en/latest/) 
     },
     {
       category: "Databases",
-      icon: "M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4", // Database icon
+      icon: "M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4",
       bgColor: "bg-blue-100 dark:bg-blue-900/30",
       textColor: "text-blue-600 dark:text-blue-400",
       items: [
@@ -266,7 +350,7 @@ Check out the [full documentation](https://apex-docs.readthedocs.io/en/latest/) 
     },
     {
       category: "Methodologies",
-      icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2", // Clipboard icon
+      icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2",
       bgColor: "bg-indigo-100 dark:bg-indigo-900/30",
       textColor: "text-indigo-600 dark:text-indigo-400",
       items: [
@@ -279,7 +363,7 @@ Check out the [full documentation](https://apex-docs.readthedocs.io/en/latest/) 
     },
     {
       category: "Other Skills",
-      icon: "M13 10V3L4 14h7v7l9-11h-7z", // Lightning bolt icon
+      icon: "M13 10V3L4 14h7v7l9-11h-7z",
       bgColor: "bg-green-100 dark:bg-green-900/30",
       textColor: "text-green-600 dark:text-green-400",
       items: [
@@ -347,54 +431,6 @@ Check out the [full documentation](https://apex-docs.readthedocs.io/en/latest/) 
       icon: "fab fa-python",
       link: "https://www.coursera.org/account/accomplishments/certificate/2BDBFSVA8APC",
       color: "blue"
-    }
-  ],
-
-  professionalExperience: [
-    {
-      company: "NASDAQ",
-      title: "Senior Software Developer",
-      period: "Nov 2022 – Present | Bangalore - IN",
-      responsibilities: [
-        "<strong>High Performance Trading Systems:</strong> Developed and optimized customer tailored solutions for the Multi Matching Engine (MME) - a lightning fast orders matching and execution engine) using Java, Spring framework, and reactive patterns, to enable automatic trade execution for 10M+ daily transactions across forex, equities, and crypto markets.",
-        "<strong>Cloud-Native Deployment:</strong> Containerized services with Docker and orchestrated deployments on Kubernetes/Amazon EKS, reducing infrastructure costs and improving system uptime.",
-        "<strong>CI/CD Automation:</strong> Contributed to migration from Teamcity and wrote GitLab CI/CD pipelines for artifact publishing, vulnerability scanning (Prisma, SonarQube, Sonatype), and deployment, reducing build time.",
-        "<strong>Infrastructure-as-Code:</strong> Customized the Operations framework called MOE (MME Operating Environments) to streamline Amazon EKS and EKS Anywhere deployments, designing partitioned Helm layouts resulting in a significant reduction in deployment setup time for a LATAM customer.",
-        "<strong>Customer Adaptations:</strong> Delivered 15+ product adaptations and customizations for 3+ customers across LATAM, US and EU to deliver tailored solutions addressing unique requirements, including leading onsite acceptance testing from dev side in Colombia for a equity trading platform handling $500M+ daily volume.",
-        "<strong>Security &amp; Testing:</strong><ul>Patched 50+ vulnerabilities in dependencies, reducing Sonatype threat score from 9→1.5, enhancing supply chain security.</li>Identified and resolved compatibility issues in unit testing frameworks that revamped 2500+ JUnit/Mockito test cases, achieving 90%+ code coverage.</li>Designed checkstyles and established coding conventions to ensure high-quality code standards.</li></ul>",
-        "<strong>AI-Driven Efficiency:</strong> Utilized GitHub Copilot to draft technical documentation (Javadocs, Confluence pages) and boilerplate code (DTOs, repetitive logic), and conducted a proof of concept (PoC) on Diffblue to automate generating unit tests, increasing code coverage significantly and enhancing code reliability.",
-        "<strong>Streamline workflows:</strong> Administered tools like TaskTop integration, repository access management, and CI/CD pipeline automation for seamless builds and deployments.</li>",
-      ]
-    },
-    {
-      company: "Capsystematic Technologies Pvt Ltd.",
-      title: "Software Engineer",
-      period: "Dec 2019 – Nov 2022 | Bangalore - IN",
-      responsibilities: [
-        "<strong>Core Development:</strong> Engineered and modernized capital markets and payment software for banks and financial institutions by leveraging a comprehensive technology stack—Java, Spring Boot, Python Flask, Docker, Apache Camel, CXF, Informix, Orika, and MapStruct—to deliver scalable, secure, and high-performance solutions.",
-        "<strong>Zeus-GPI (General process interface):</strong> A business integration middleware to connect front office with core system, typically processes ISO 20022 message by SOAP and REST APIs and services for seamless integration across different channels.",
-        "Developed SOAP and REST APIs using Java, Spring Boot, and Apache Camel to route Interbank financial telecommunication (e.g., Swift MT/MX, ISO 20022) between diverse endpoints like databases, message queues, HTTP, SOAP, and SMB filesystems that enabled seamless integration for investment banking customers to significantly reduce message delivery latency.",
-        "<strong>CMS (Card Management System):</strong> A payment technology built on the BASE24 engine to acquire, authenticate, route, switch, and authorize credit, debit, and forex transactions.",
-        "Migrated legacy Pro*C (circa 1993) code to a modern Java-based architecture using Spring Boot, JPA and Security, improving scalability and maintainability.",
-        "Developed RESTful APIs enabling transaction reconciliation, settlement, dispute management, and corporate card services for acquirers and issuers.",
-        "<strong>CapSuite:</strong> Designed and implemented an automation tool that generates code for entities and mappings based on SQL procedures and Swift MT/MX message definitions, significantly improving developer efficiency.",
-      ]
-    },
-    {
-      company: "Capsystematic Technologies Pvt Ltd.",
-      title: "SDE Intern",
-      period: "Sept 2019 – Dec 2019 | Bangalore - IN",
-      responsibilities: [
-        "Developed Apache Camel message routes, gained investment banking exposure."
-      ]
-    }
-  ],
-
-  education: [
-    {
-      degree: "B.E. – Information Technology (CGPA = 8.24)",
-      institution: "Apollo Institute of Engineering (Gujarat technological university)",
-      year: "Jul 2015- May 2019 | Ahmedabad - IN"
     }
   ]
 };

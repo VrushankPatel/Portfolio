@@ -37,30 +37,30 @@ export function ProjectCard({
 
   return (
     <motion.div 
-      className="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300"
+      className="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden h-full transition-all duration-300"
       whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)" }}
     >
-      <div className="flex flex-col md:flex-row">
-        <div className="p-6 flex-grow">
-          <div className="flex items-center gap-3 mb-3">
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white">{title}</h3>
-            <span className={`px-2 py-1 text-xs font-medium rounded ${colorVariants[techColor as keyof typeof colorVariants] || colorVariants.blue}`}>
-              {primaryTech}
-            </span>
-          </div>
-          <p className="text-gray-600 dark:text-gray-300 mb-4 max-w-3xl">
-            {description}
-          </p>
-          <div className="flex flex-wrap gap-2 mb-4">
-            {technologies.map((tech, index) => (
-              <Badge key={index} variant="outline" className="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600">
-                {tech}
-              </Badge>
-            ))}
-          </div>
+      <div className="p-6 flex flex-col h-full">
+        <div className="flex items-center gap-3 mb-3">
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white">{title}</h3>
+          <span className={`px-2 py-1 text-xs font-medium rounded ${colorVariants[techColor as keyof typeof colorVariants] || colorVariants.blue}`}>
+            {primaryTech}
+          </span>
         </div>
         
-        <div className="p-6 md:w-64 bg-gray-50 dark:bg-gray-700/50 flex flex-row md:flex-col gap-3 border-t md:border-t-0 md:border-l border-gray-100 dark:border-gray-700">
+        <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow">
+          {description}
+        </p>
+        
+        <div className="flex flex-wrap gap-2 mb-4">
+          {technologies.map((tech, index) => (
+            <Badge key={index} variant="outline" className="bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300">
+              {tech}
+            </Badge>
+          ))}
+        </div>
+        
+        <div className="flex flex-wrap gap-3 pt-4 border-t border-gray-100 dark:border-gray-700">
           {links.docs && (
             <SmallSocialButton 
               href={links.docs} 

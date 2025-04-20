@@ -7,16 +7,20 @@ import { Printer, Download, ArrowLeft } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Resume() {
-  const { name, title, profilePic, socialLinks, summary, skills, professionalExperience, education, certifications } = profileData;
+  const { 
+    name, 
+    title, 
+    socialLinks, 
+    resumeSkills, 
+    professionalExperience, 
+    education, 
+    resumeCertifications 
+  } = profileData;
 
-  // Scroll to top when the component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
-
-    // Set the title
     document.title = `Resume - ${name} | ${title}`;
 
-    // Add print-specific styles to head
     const style = document.createElement('style');
     style.setAttribute('media', 'print');
     style.innerHTML = `
@@ -61,7 +65,6 @@ export default function Resume() {
       <Navbar />
 
       <div className="container mx-auto px-4 py-8 max-w-5xl">
-        {/* Actions Bar (non-printable) */}
         <div className="print:hidden mb-8 flex flex-wrap items-center justify-between gap-4">
           <Link href="/">
             <a className="inline-flex items-center gap-2 text-primary hover:text-primary/80 dark:text-primary-400 dark:hover:text-primary-300 transition-colors">
@@ -91,9 +94,7 @@ export default function Resume() {
           </div>
         </div>
 
-        {/* Resume Content */}
         <div className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-8 print:shadow-none print:p-0 print:dark:bg-white print:dark:text-black print-resume">
-          {/* Header */}
           <header className="mb-6 pb-2 border-b border-gray-200 dark:border-gray-700 print:dark:border-gray-200">
             <div className="text-center mb-2">
               <h1 className="text-3xl font-bold text-gray-900 dark:text-white print:dark:text-gray-900">{name}</h1>
@@ -116,66 +117,32 @@ export default function Resume() {
             </div>
           </header>
 
-          {/* Experience */}
           <section className="mb-6">
             <h2 className="text-base font-bold uppercase text-gray-800 dark:text-gray-200 mb-3 print:dark:text-gray-800 border-b border-gray-200 dark:border-gray-700 pb-1">
               Experience (5+ Years)
             </h2>
             <div className="space-y-4">
-              <div className="pb-2">
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1">
-                  <div>
-                    <h3 className="font-semibold text-gray-800 dark:text-gray-200 print:dark:text-gray-800">{professionalExperience[0].title}</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 print:dark:text-gray-600">{professionalExperience[0].company}</p>
+              {professionalExperience.map((exp, index) => (
+                <div key={index} className="pb-2">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1">
+                    <div>
+                      <h3 className="font-semibold text-gray-800 dark:text-gray-200 print:dark:text-gray-800">{exp.title}</h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400 print:dark:text-gray-600">{exp.company}</p>
+                    </div>
+                    <p className="text-sm text-gray-500 dark:text-gray-400 mt-0 sm:mt-0 print:dark:text-gray-500">
+                      {exp.period}
+                    </p>
                   </div>
-                  <p className="text-sm text-gray-500 dark:text-gray-400 mt-0 sm:mt-0 print:dark:text-gray-500">
-                    {professionalExperience[0].period}
-                  </p>
+                  <ul className="list-disc pl-5 text-sm text-gray-600 dark:text-gray-300 space-y-1 print:dark:text-gray-600">
+                    {exp.responsibilities.map((item, itemIndex) => (
+                      <li key={itemIndex} dangerouslySetInnerHTML={{ __html: item }}></li>
+                    ))}
+                  </ul>
                 </div>
-                <ul className="list-disc pl-5 text-sm text-gray-600 dark:text-gray-300 space-y-1 print:dark:text-gray-600">
-                  {professionalExperience[0].responsibilities.map((item, index) => (
-                    <li key={index} dangerouslySetInnerHTML={{ __html: item }}></li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="pb-2">
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1">
-                  <div>
-                    <h3 className="font-semibold text-gray-800 dark:text-gray-200 print:dark:text-gray-800">{professionalExperience[1].title}</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 print:dark:text-gray-600">{professionalExperience[1].company}</p>
-                  </div>
-                  <p className="text-sm text-gray-500 dark:text-gray-400 mt-0 sm:mt-0 print:dark:text-gray-500">
-                    {professionalExperience[1].period}
-                  </p>
-                </div>
-                <ul className="list-disc pl-5 text-sm text-gray-600 dark:text-gray-300 space-y-1 print:dark:text-gray-600">
-                  {professionalExperience[1].responsibilities.map((item, index) => (
-                    <li key={index} dangerouslySetInnerHTML={{ __html: item }}></li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="pb-2">
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1">
-                  <div>
-                    <h3 className="font-semibold text-gray-800 dark:text-gray-200 print:dark:text-gray-800">{professionalExperience[2].title}</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 print:dark:text-gray-600">{professionalExperience[2].company}</p>
-                  </div>
-                  <p className="text-sm text-gray-500 dark:text-gray-400 mt-0 sm:mt-0 print:dark:text-gray-500">
-                    {professionalExperience[2].period}
-                  </p>
-                </div>
-                <ul className="list-disc pl-5 text-sm text-gray-600 dark:text-gray-300 space-y-1 print:dark:text-gray-600">
-                  {professionalExperience[2].responsibilities.map((item, index) => (
-                    <li key={index} dangerouslySetInnerHTML={{ __html: item }}></li>
-                  ))}
-                </ul>
-              </div>
+              ))}
             </div>
           </section>
 
-          {/* Skills */}
           <section className="mb-6">
             <h2 className="text-base font-bold uppercase text-gray-800 dark:text-gray-200 mb-3 print:dark:text-gray-800 border-b border-gray-200 dark:border-gray-700 pb-1">
               Technical Skills
@@ -186,7 +153,7 @@ export default function Resume() {
                   Programming Languages:
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 print:dark:text-gray-600 inline ml-2">
-                  Java, Python, SQL
+                  {resumeSkills.programmingLanguages.join(", ")}
                 </p>
               </div>
               <div>
@@ -194,7 +161,7 @@ export default function Resume() {
                   Frameworks:
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 print:dark:text-gray-600 inline ml-2">
-                  SpringBoot, Hibernate, Flask, Apache Camel, JUnit/Mockito
+                  {resumeSkills.frameworks.join(", ")}
                 </p>
               </div>
               <div>
@@ -202,7 +169,7 @@ export default function Resume() {
                   Databases:
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 print:dark:text-gray-600 inline ml-2">
-                  MySQL, Informix
+                  {resumeSkills.databases.join(", ")}
                 </p>
               </div>
               <div>
@@ -210,7 +177,7 @@ export default function Resume() {
                   Cloud / DevOps and CI/CD:
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 print:dark:text-gray-600 inline ml-2">
-                  Docker, Kubernetes, GitLab CI/CD, TeamCity
+                  {resumeSkills.cloudDevOps.join(", ")}
                 </p>
               </div>
               <div>
@@ -218,7 +185,7 @@ export default function Resume() {
                   Distributed Systems:
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 print:dark:text-gray-600 inline ml-2">
-                  Apache Kafka, Reactive Microservices, REST/gRPC APIs
+                  {resumeSkills.distributedSystems.join(", ")}
                 </p>
               </div>
               <div>
@@ -226,105 +193,51 @@ export default function Resume() {
                   Other Skills:
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 print:dark:text-gray-600 inline ml-2">
-                  Github Copilot, Cursor, Replit, Diffblue, Mapstruct, Orika
+                  {resumeSkills.otherSkills.join(", ")}
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Education */}
           <section className="mb-6">
             <h2 className="text-base font-bold uppercase text-gray-800 dark:text-gray-200 mb-3 print:dark:text-gray-800 border-b border-gray-200 dark:border-gray-700 pb-1">
               Education
             </h2>
             <div className="space-y-3">
-              <div className="flex flex-col sm:flex-row sm:justify-between">
-                <div>
-                  <h3 className="font-semibold text-sm text-gray-800 dark:text-gray-200 print:dark:text-gray-800">{education[0].degree}</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 print:dark:text-gray-600">{education[0].institution}</p>
+              {education.map((edu, index) => (
+                <div key={index} className="flex flex-col sm:flex-row sm:justify-between">
+                  <div>
+                    <h3 className="font-semibold text-sm text-gray-800 dark:text-gray-200 print:dark:text-gray-800">{edu.degree}</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 print:dark:text-gray-600">{edu.institution}</p>
+                  </div>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 mt-0 sm:mt-0 print:dark:text-gray-500">
+                    {edu.year}
+                  </p>
                 </div>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mt-0 sm:mt-0 print:dark:text-gray-500">
-                  {education[0].year}
-                </p>
-              </div>
+              ))}
             </div>
           </section>
 
-          {/* Certifications */}
           <section className="mb-6">
             <h2 className="text-base font-bold uppercase text-gray-800 dark:text-gray-200 mb-3 print:dark:text-gray-800 border-b border-gray-200 dark:border-gray-700 pb-1">
               Certifications
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2">
-              <div className="flex items-start">
-                <svg className="w-4 h-4 text-primary dark:text-primary-400 mt-0.5 flex-shrink-0 print:dark:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                <div className="ml-2">
-                  <a href="https://bcert.me/sefawhitn" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-primary-400 print:dark:text-gray-800 print:hover:dark:text-gray-800">
-                    Scrum Alliance CSPO
-                  </a>
+              {resumeCertifications.map((cert, index) => (
+                <div key={index} className="flex items-start">
+                  <svg className="w-4 h-4 text-primary dark:text-primary-400 mt-0.5 flex-shrink-0 print:dark:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <div className="ml-2">
+                    <a href={cert.link} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-primary-400 print:dark:text-gray-800 print:hover:dark:text-gray-800">
+                      {cert.title}
+                    </a>
+                  </div>
                 </div>
-              </div>
-
-              <div className="flex items-start">
-                <svg className="w-4 h-4 text-primary dark:text-primary-400 mt-0.5 flex-shrink-0 print:dark:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                <div className="ml-2">
-                  <a href="https://courses.cognitiveclass.ai/certificates/e73685d94f344d92b329712d7dceac5c" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-primary-400 print:dark:text-gray-800 print:hover:dark:text-gray-800">
-                    IBM Blockchain
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <svg className="w-4 h-4 text-primary dark:text-primary-400 mt-0.5 flex-shrink-0 print:dark:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                <div className="ml-2">
-                  <a href="https://drive.google.com/file/d/1rgkx3sx-quvh7SUVxVdWT5iELAWM5b4y/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-primary-400 print:dark:text-gray-800 print:hover:dark:text-gray-800">
-                    Nutanix Hybrid Cloud
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <svg className="w-4 h-4 text-primary dark:text-primary-400 mt-0.5 flex-shrink-0 print:dark:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                <div className="ml-2">
-                  <a href="https://drive.google.com/file/d/1-ory7-vSeIpgnFXzP_oDQGzHQf8yJiV5/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-primary-400 print:dark:text-gray-800 print:hover:dark:text-gray-800">
-                    AWS Data Analytics
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <svg className="w-4 h-4 text-primary dark:text-primary-400 mt-0.5 flex-shrink-0 print:dark:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                <div className="ml-2">
-                  <a href="https://graduation.udacity.com/confirm/EL966DFN" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-primary-400 print:dark:text-gray-800 print:hover:dark:text-gray-800">
-                    Deep Learning Nanodegree
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <svg className="w-4 h-4 text-primary dark:text-primary-400 mt-0.5 flex-shrink-0 print:dark:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                <div className="ml-2">
-                  <a href="https://drive.google.com/file/d/1r7c2GWMveQTFBI2w0Vbt-LC2LRHth3o6/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-primary-400 print:dark:text-gray-800 print:hover:dark:text-gray-800">
-                    Intel AI Edge
-                  </a>
-                </div>
-              </div>
+              ))}
             </div>
           </section>
 
-          {/* Projects Footer */}
           <div className="text-center mt-4 text-xs text-gray-500 dark:text-gray-400 print:dark:text-gray-500">
             <p>APEX · Bluelink · Maxine · Complexica · Other Projects · More</p>
           </div>
