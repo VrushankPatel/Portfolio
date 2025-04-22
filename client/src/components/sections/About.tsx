@@ -24,8 +24,10 @@ export function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
+            style={{ textAlign: "justify" }}
           >
-            I'm a passionate Software developer with 5+ years of experience, specialized in high performance trading systems, capital markets, and payment platforms. Skilled in Java, Python, Apache Kafka, Reactive programming, and cloud-native technologies.
+            {/* I'm a passionate Software developer with 5+ years of experience, specialized in high performance trading systems, capital markets, and payment platforms. Skilled in Java, Python, Apache Kafka, Reactive programming, and cloud-native technologies. */}
+            With over 5 years of experience in software engineering, I specialize in building low-latency trading platforms, business integration middleware, and payment systems. My work focuses on high-performance, event-driven architectures using technologies like Kafka and reactive programming. Recently, I’ve been exploring arbitrage detection systems and AI-powered tools to push the boundaries of trading intelligence.
           </motion.p>
 
           <motion.div 

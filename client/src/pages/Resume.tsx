@@ -25,21 +25,109 @@ export default function Resume() {
     style.setAttribute('media', 'print');
     style.innerHTML = `
       @page {
-        size: A4;
-        margin: 10mm;
+        margin: 15mm;
+        size: letter portrait;
       }
       body {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
+        background: white !important;
       }
+
+      .no-print {
+        display: none !important;
+      }
+
       .print-container {
-        width: 100%;
-        max-width: 100%;
-        padding: 0;
-      }
-      .print-resume {
-        box-shadow: none !important;
         padding: 0 !important;
+        margin: 0 !important;
+        background: white !important;
+      }
+        
+      .print-resume {
+        padding: 0 !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        background: white !important;
+        color: black !important;
+      }
+      
+      .print-resume * {
+        color: black !important;
+        background: white !important;
+      }
+
+      .print-resume h1 {
+        font-size: 18pt !important;
+        margin-bottom: 4pt !important;
+      }
+      
+      .print-resume h2 {
+        font-size: 11pt !important;
+        margin: 8pt 0 4pt 0 !important;
+        text-transform: uppercase !important;
+        border-bottom: 1pt solid #000 !important;
+        padding-bottom: 2pt !important;
+      }
+      
+      .print-resume h3 {
+        font-size: 10pt !important;
+        margin: 0 !important;
+      }
+
+      .print-resume p, .print-resume li {
+        font-size: 9pt !important;
+        margin: 0 !important;
+        line-height: 1.3 !important;
+      }
+
+      .print-resume ul {
+        margin: 2pt 0 !important;
+        padding-left: 12pt !important;
+      }
+
+      .print-resume li {
+        margin-bottom: 2pt !important;
+      }
+
+      .print-resume section {
+        margin-bottom: 8pt !important;
+      }
+
+      .print-resume .header-links {
+        font-size: 9pt !important;
+        margin: 4pt 0 !important;
+      }
+
+      .print-resume .header-links a {
+        color: black !important;
+        text-decoration: none !important;
+      }
+
+      .print-resume .skills-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 4pt !important;
+        margin: 4pt 0 !important;
+      }
+
+      .print-resume .certifications-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 2pt !important;
+      }
+
+      .print-resume .cert-item {
+        font-size: 9pt !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+      }
+
+      .print-resume .projects-footer {
+        display: none !important;
       }
     `;
     document.head.appendChild(style);
@@ -65,7 +153,7 @@ export default function Resume() {
       <Navbar />
 
       <div className="container mx-auto px-4 py-8 max-w-5xl">
-        <div className="print:hidden mb-8 flex flex-wrap items-center justify-between gap-4">
+        <div className="print:hidden mb-8 flex flex-wrap items-center justify-between gap-4 no-print">
           <Link href="/">
             <a className="inline-flex items-center gap-2 text-primary hover:text-primary/80 dark:text-primary-400 dark:hover:text-primary-300 transition-colors">
               <ArrowLeft className="w-5 h-5" />
