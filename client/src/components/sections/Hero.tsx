@@ -6,8 +6,8 @@ export function Hero() {
   const { name, title, profilePic, cspoBadge, summary, socialLinks } = profileData;
 
   return (
-    <section className="relative overflow-hidden pt-16 md:pt-20 lg:pt-24 bg-hero-pattern">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="relative overflow-hidden pt-16 md:pt-20 lg:pt-24 lg:min-h-[85vh] bg-hero-pattern">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 h-full flex flex-col justify-center">
         <div className="flex flex-col-reverse lg:flex-row items-center lg:items-center justify-between gap-8 md:gap-16">
           <div className="w-full lg:w-3/5 space-y-6">
             <motion.div
