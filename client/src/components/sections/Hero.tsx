@@ -3,11 +3,15 @@ import { SocialButton } from "@/components/ui/social-button";
 import { profileData } from "@/data";
 
 export function Hero() {
-  const { name, title, profilePic, cspoBadge, summary, socialLinks } = profileData;
+  const { name, title, summary, socialLinks, tagline } = profileData;
+  
+  // Use hardcoded image paths
+  const profilePic = "/img/profile-pic.jpg";
+  const cspoBadge = "/img/sa-cspo-600.png";
 
   return (
-    <section className="relative overflow-hidden pt-16 md:pt-20 lg:pt-24 lg:min-h-[85vh] bg-hero-pattern">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 h-full flex flex-col justify-center">
+    <section className="relative overflow-hidden flex items-center min-h-[90vh] bg-hero-pattern">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 md:py-20 lg:py-24">
         <div className="flex flex-col-reverse lg:flex-row items-center lg:items-center justify-between gap-8 md:gap-16">
           <div className="w-full lg:w-3/5 space-y-6">
             <motion.div
@@ -29,11 +33,11 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Architecting the backbone of modern trading — low latency, high throughput, always agile.
+              {tagline}
             </motion.p>
 
             <motion.div 
-              className="flex flex-wrap gap-4 pt-2 mb-12 pb-4"
+              className="flex flex-wrap gap-4 pt-2 mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -63,7 +67,7 @@ export function Hero() {
           </div>
 
           <motion.div 
-            className="w-full lg:w-2/5 flex items-center justify-center pb-12"
+            className="w-full lg:w-2/5 flex items-center justify-center"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}

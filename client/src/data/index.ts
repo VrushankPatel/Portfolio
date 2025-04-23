@@ -90,8 +90,9 @@ Check out the [full documentation](https://apex-docs.readthedocs.io/en/latest/) 
   name: "Vrushank Patel",
   title: "Senior Software Developer",
   company: "NASDAQ",
-  profilePic: "./img/profile-pic.jpg",
-  cspoBadge: "./img/sa-cspo-600.png",
+  profilePic: "/img/profile-pic.jpg",
+  cspoBadge: "/img/sa-cspo-600.png",
+  tagline: "Architecting the backbone of modern trading — low latency, high throughput, always agile.",
   summary: "Hi! I'm a passionate Software developer with 5+ years of experience, specialized in high performance trading systems, capital markets, and payment platforms. Skilled in Java, Python, Apache Kafka, Reactive programming, and cloud-native technologies. Certified Scrum Product Owner (CSPO), focusing on agile development and modernization.",
 
   socialLinks: {
