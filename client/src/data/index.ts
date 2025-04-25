@@ -122,11 +122,10 @@ Check out the [full documentation](https://apex-docs.readthedocs.io/en/latest/) 
 
   resumeSkills: [
     { "Programming Languages": "Java, Python, SQL" },
-    { "Frameworks": "SpringBoot, Hibernate, Flask, Apache Camel, JUnit/Mockito" },
-    { "Databases": "MySQL, Informix" },
-    { "Cloud / DevOps and CI/CD": "Docker, Kubernetes, GitLab CI/CD, TeamCity" },
-    { "Distributed Systems": "Apache Kafka, Reactive Microservices, REST/gRPC APIs" },
-    { "Other Skills": "Github Copilot, Cursor, Replit, Diffblue, Mapstruct, Orika" }
+    { "Frameworks": "Spring Boot, Hibernate, Flask, Apache Camel, JUnit" },
+    { "Cloud / DevOps and CI/CD": "Docker, Kubernetes (Amazon EKS), GitLab CI/CD, AWS (S3, EC2, RDS, Lambda, IAM)" },
+    { "Distributed Systems": "Apache Kafka, REST/gRPC APIs, Project Reactor, WebFlux (Reactive Microservices)" },
+    { "AI for productivity": "GitHub Copilot, Diffblue Cover, Cursor"},
   ],
 
   professionalExperience: [
@@ -306,8 +305,8 @@ Check out the [full documentation](https://apex-docs.readthedocs.io/en/latest/) 
       items: [
         { name: "Java", bgColor: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300" },
         { name: "Python", bgColor: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300" },
-        { name: "Go", bgColor: "bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300" },
-        { name: "JavaScript", bgColor: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300" },
+        // { name: "Go", bgColor: "bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300" },
+        // { name: "JavaScript", bgColor: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300" },
         { name: "SQL", bgColor: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300" }
       ]
     },
@@ -318,10 +317,10 @@ Check out the [full documentation](https://apex-docs.readthedocs.io/en/latest/) 
       textColor: "text-secondary-600 dark:text-secondary-400",
       items: [
         { name: "Spring Boot", bgColor: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300" },
-        { name: "React", bgColor: "bg-cyan-100 text-cyan-800 dark:bg-cyan-900/30 dark:text-cyan-300" },
-        { name: "Apache Kafka", bgColor: "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300" },
-        { name: "TensorFlow", bgColor: "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300" },
-        { name: "Flask", bgColor: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300" }
+        { name: "Hibernate", bgColor: "bg-cyan-100 text-cyan-800 dark:bg-cyan-900/30 dark:text-cyan-300" },
+        { name: "Flask", bgColor: "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300" },
+        { name: "Apache Camel", bgColor: "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300" },
+        { name: "JUnit", bgColor: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300" }
       ]
     },
     {
@@ -330,9 +329,9 @@ Check out the [full documentation](https://apex-docs.readthedocs.io/en/latest/) 
       bgColor: "bg-accent-100 dark:bg-accent-900/30",
       textColor: "text-accent-600 dark:text-accent-400",
       items: [
-        { name: "AWS", bgColor: "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300" },
-        { name: "Docker", bgColor: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300" },
-        { name: "Kubernetes", bgColor: "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300" },
+        { name: "Docker", bgColor: "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300" },
+        { name: "Kubernetes (Amazon EKS)", bgColor: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300" },
+        { name: "AWS (S3, EC2, RDS, Lambda, IAM)", bgColor: "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300" },
         { name: "GitLab CI/CD", bgColor: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300" },
         { name: "Firebase", bgColor: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300" }
       ]
@@ -344,8 +343,8 @@ Check out the [full documentation](https://apex-docs.readthedocs.io/en/latest/) 
       textColor: "text-blue-600 dark:text-blue-400",
       items: [
         { name: "PostgreSQL", bgColor: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300" },
-        { name: "MongoDB", bgColor: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300" },
-        { name: "Redis", bgColor: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300" },
+        // { name: "MongoDB", bgColor: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300" },
+        // { name: "Redis", bgColor: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300" },
         { name: "MySQL", bgColor: "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300" }
       ]
     },
@@ -369,9 +368,9 @@ Check out the [full documentation](https://apex-docs.readthedocs.io/en/latest/) 
       textColor: "text-green-600 dark:text-green-400",
       items: [
         { name: "Reactive Programming", bgColor: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300" },
-        { name: "Machine Learning", bgColor: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300" },
-        { name: "UI/UX Design", bgColor: "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300" },
-        { name: "System Architecture", bgColor: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300" }
+        // { name: "Machine Learning", bgColor: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300" },
+        // { name: "UI/UX Design", bgColor: "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300" },
+        { name: "Distributed Systems", bgColor: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300" }
       ]
     }
   ],
