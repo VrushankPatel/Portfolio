@@ -122,7 +122,7 @@ Check out the [full documentation](https://apex-docs.readthedocs.io/en/latest/) 
 
   resumeSkills: [
     { "Programming Languages": "Java, Python, SQL" },
-    { "Frameworks": "Spring Boot, Hibernate, Flask, Apache Camel, JUnit" },
+    { "Frameworks": "Spring Boot (Web, JPA, Security), Flask, Apache Camel, JUnit" },
     { "Cloud / DevOps and CI/CD": "Docker, Kubernetes (Amazon EKS), GitLab CI/CD, AWS (S3, EC2, RDS, Lambda, IAM)" },
     { "Distributed Systems": "Apache Kafka, REST/gRPC APIs, Project Reactor, WebFlux (Reactive Microservices)" },
     { "AI for productivity": "GitHub Copilot, Diffblue Cover, Cursor"},
@@ -316,8 +316,8 @@ Check out the [full documentation](https://apex-docs.readthedocs.io/en/latest/) 
       bgColor: "bg-secondary-100 dark:bg-secondary-900/30",
       textColor: "text-secondary-600 dark:text-secondary-400",
       items: [
-        { name: "Spring Boot", bgColor: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300" },
-        { name: "Hibernate", bgColor: "bg-cyan-100 text-cyan-800 dark:bg-cyan-900/30 dark:text-cyan-300" },
+        { name: "Spring Boot (Web, JPA, Security)", bgColor: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300" },
+        // { name: "Hibernate", bgColor: "bg-cyan-100 text-cyan-800 dark:bg-cyan-900/30 dark:text-cyan-300" },
         { name: "Flask", bgColor: "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300" },
         { name: "Apache Camel", bgColor: "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300" },
         { name: "JUnit", bgColor: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300" }
